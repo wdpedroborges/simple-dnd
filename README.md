@@ -1,14 +1,14 @@
-# Simple DnD
-## A simple drag and drop made with React.js and Typescript
-
-If you ever had to use react-beatiful-dnd, you know that it is way too complex and annoying. So, I made this simple dnd, that allows you to create a dnd with less than 20 lines of code.
-
 ![badge](https://img.shields.io/github/watchers/wdpedroborges/simple-dnd?style=social)
 ![badge](https://img.shields.io/github/stars/wdpedroborges/simple-dnd?style=social)
 ![badge](https://img.shields.io/github/license/wdpedroborges/simple-dnd)
 ![badge](https://img.shields.io/badge/powered%20by-vite-blue)
 ![badge](https://img.shields.io/badge/powered%20by-react.js-blue)
 ![badge](https://img.shields.io/badge/powered%20by-typescript-blue)
+
+# Simple DnD
+## A simple drag and drop made with React.js and Typescript
+
+If you ever had to use react-beatiful-dnd, you know that it is way too complex and annoying. So, I made this simple dnd, that allows you to create a dnd with less than 20 lines of code.
 
 ## Live Demo
 
