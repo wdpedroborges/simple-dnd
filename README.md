@@ -19,7 +19,7 @@ If you ever had to use react-beatiful-dnd, you know that it is way to complex an
 
 ## Live Demo
 
-[Click here to see it]((wdpedroborges.github.io/simple-dnd))
+<a href="wdpedroborges.github.io/simple-dnd/" target="_blank">Click here to see it</a>
 
 ## How to use
 
