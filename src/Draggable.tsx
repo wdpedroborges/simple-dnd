@@ -63,7 +63,7 @@ function Draggable({value, id, affectedLeft, affectedRight, affectedTop, affecte
 		}))
 		setFollowCursor(true)
 	}
-	const handleMouseUp = () => {
+	const handleMouseUpOrTouchEnd = () => {
 		setStyle(prevState => ({
 			... prevState,
 			position: 'static',
@@ -75,7 +75,7 @@ function Draggable({value, id, affectedLeft, affectedRight, affectedTop, affecte
 		setFollowCursor(false)
 	}
 
-	const handleTouchStart = (event: any) => {
+	const handleTouchMove = (event: any) => {
 		setStyle(prevState => ({
 			... prevState,
 			position: 'absolute',
@@ -85,6 +85,10 @@ function Draggable({value, id, affectedLeft, affectedRight, affectedTop, affecte
 			transform: 'translate(-50%, -50%)'
 		}))
 		setFollowCursor(true)
+
+		if (followCursor) {
+			onPossiblePlacing(thisElementRef.current, id)
+		}
 	}
 
 	const checkTypeOfValue = () => {
@@ -137,9 +141,9 @@ function Draggable({value, id, affectedLeft, affectedRight, affectedTop, affecte
 		<div	
 			ref={thisElementRef}
 			onMouseDown={handleMouseDown}
-			onMouseUp={handleMouseUp}
-			onTouchMove={handleTouchStart}
-			onTouchEnd={handleMouseUp}
+			onMouseUp={handleMouseUpOrTouchEnd}
+			onTouchMove={handleTouchMove}
+			onTouchEnd={handleMouseUpOrTouchEnd}
 			style={{... style, ...draggableStyle, marginLeft: lookForHovering('left'), marginRight: lookForHovering('right'), marginTop: lookForHovering('top'), marginBottom: lookForHovering('bottom')}}
 		>
 				{checkTypeOfValue()}
